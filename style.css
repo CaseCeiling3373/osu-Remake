@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.UI{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8px;
+    width: 100vw;
+    left: 0;
+    color: white;
+}
+
+#acc, #combo{
+    font-size: 26px;
+    margin: 0;
+}
+
+#score{
+    width: 200px;
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+}
+.beat{
+    width: 6.25vw;
+    height: 6.25vw;
+    border: 0.25vw solid white;
+    border-radius: 50%;
+    background: radial-gradient(rgba(255, 255, 0, 0.3), rgba(255, 255, 0, 0.6));
+    box-shadow: 0 0 1vw black, 0 0 1vw rgba(0, 0, 0, 0.5) inset;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;;
+    font-size: 2.5vw;
+    font-weight: 700;
+    position: absolute;
+}
+.beat::after{
+    content: "";
+    width: 6.25vw;
+    height: 6.25vw;
+    border: 0.25vw solid yellow;
+    position: absolute;
+    border-radius: 50%;
+    animation: beat 1s linear;
+}
+
+#screen{
+    width: 100vw;
+    height: 60vw;
+    position: relative; 
+}
+
+#screenCover{
+    width: 100vw;
+    height: 60vw;
+    position: absolute;
+    z-index: 10;
+}
+
+@keyframes beat {
+    from{
+        transform: scale(3);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+#blackscreen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    z-index: 11;
+    /* visibility: hidden; */
+}
+
+.btn{
+    font-size: 40px;
+    padding: 20px 50px;
+}
+
+.mapDetails{
+    display: flex;
+    align-items: flex-end;
+}
+
+.infoCat{
+    text-align: right;
+    margin-right: 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.infoCat h4{
+    position: relative;
+    transform: translateX(50%);
+    font-size: 24px;
+    color: white;
+}
+.mapDetails p{
+    font-size: 20px;
+}
+.endingScreen{
+    background-color: white;
+    position: absolute;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px;
+    border-radius: 18px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bolder;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+.details{
+    display: flex;
+}
+.endingScreen h1{
+    font-size: 150px;
+    margin: 0;
+    text-shadow: 0 0 10px rgb(255, 46, 46);
+    background-color: lightgrey;
+    width: 180px;
+    height: 170px;
+    padding-top: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.endingScreen h2{
+    font-size: 40px;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.det{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.det p{
+    font-size: 12px;
+    margin: 0;
+    background-color: rgb(210, 210, 210);
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+}
+.det h5{
+    font-size: 18px;
+    margin: 0;
+    margin-top: 10px;
+}
