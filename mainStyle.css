@@ -13,7 +13,7 @@ body{
     width: 36vw;
     height: 70vh;
     border: 1px solid grey;
-    background: url(dreamSpace/background.jpg);
+    background: url(dreamSpace/background.jpeg);
     background-size: cover;
 }
 #mapList{
