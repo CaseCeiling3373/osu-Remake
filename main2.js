@@ -12,6 +12,16 @@ var mapInfoList = [
         title : "Murder In My Mind",
         artist : "Kordhell",
         starRate: 3.28
+    },{
+        folderName : "BrazilianPhonkMano",
+        title : "Brazilian Phonk Mano",
+        artist : "Slowboy",
+        starRate: 3.43
+    },{
+        folderName : "MontagemOrquestraSinfonica",
+        title : "Montagem Orquestra Sinfônica",
+        artist : "DJ Tenebroso",
+        starRate: 2.82
     }
 ]
 
@@ -33,9 +43,14 @@ function createMap(idx){
 
     mapList.appendChild(map);
     map.addEventListener('mouseover', () => {
-        previewImg.background = 'url(' + folderName + '/background.jpg)';
+        previewImg.style.backgroundImage = 'url(./' + mapInfoList[idx].folderName + '/background.jpeg)';
     });
+    map.addEventListener('click', () => {
+        location.href = './' + mapInfoList[idx].folderName + '/index.html';
+    })
 }
 
 createMap(0);
 createMap(1);
+createMap(2);
+createMap(3);
